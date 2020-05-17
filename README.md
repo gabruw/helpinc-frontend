@@ -1,3 +1,7 @@
+## Sonar
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gabruw_helpinc-frontend&metric=alert_status)](https://sonarcloud.io/dashboard?id=gabruw_helpinc-frontend)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
