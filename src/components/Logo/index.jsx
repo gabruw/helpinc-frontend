@@ -1,6 +1,6 @@
 //#region Imports
 
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import IMAGES from '../../library/images';
 import useStyles from './styles';
