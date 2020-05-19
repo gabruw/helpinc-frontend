@@ -17,7 +17,7 @@ const Logo = ({ canRotate = false }) => {
         <Fragment>
             <div className={[styles.blueRectangle, blueRect].join(' ')}></div>
             <div className={[styles.grayRectangle, grayRect].join(' ')}></div>
-            <img className={styles.hammer} src={IMAGES.HAMMER} />
+            <img className={styles.hammer} src={IMAGES.HAMMER} alt='Help Inc.' />
         </Fragment>
     );
 };

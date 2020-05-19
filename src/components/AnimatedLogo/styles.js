@@ -10,20 +10,20 @@ import FONTS from '../../assets/fonts/fonts';
 export const useStyles = () => {
     const styles = makeStyles(() =>
         createStyles({
+            logo: {
+                width: '400px',
+                height: '120px',
+            },
             name: {
                 ...FONTS.HelveticaNeueLTPro75,
                 ...{
                     fontSize: '30px',
-                    marginTop: '21px',
+                    marginTop: '12px',
                     marginLeft: '65px',
                     position: 'absolute',
                     color: COLOR.SECONDARY,
                     textTransform: 'uppercase',
                 },
-            },
-            logo: {
-                width: '400px',
-                height: '120px',
             },
         })
     );

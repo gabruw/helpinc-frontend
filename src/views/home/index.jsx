@@ -2,10 +2,16 @@
 
 import React, { Fragment } from 'react';
 
+import AnimatedLogo from '../../components/AnimatedLogo/index';
+
 //#endregion
 
 const Home = () => {
-    return <Fragment></Fragment>;
+    return (
+        <Fragment>
+            <AnimatedLogo />
+        </Fragment>
+    );
 };
 
 export default Home;
