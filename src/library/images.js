@@ -1,5 +1,5 @@
 const IMAGES = {
-    HAMMER: require('../assets/img/hammer.png'),
+    HAMMER: require('../assets/images/hammer.png'),
 };
 
 export default IMAGES;

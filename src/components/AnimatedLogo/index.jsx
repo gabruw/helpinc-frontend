@@ -3,15 +3,18 @@
 import React, { Fragment, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import Grid from '@material-ui/core/Grid';
-
 import { debounce } from 'lodash';
+import Grid from '@material-ui/core/Grid';
+import Fade from '@material-ui/core/Fade';
+
+import Logo from '../Logo/index';
 import useStyles from './styles';
 
 //#endregion
 
 const AnimatedLogo = () => {
     const styles = useStyles();
+
     const [rotate, setRotate] = useState(false);
     const delayedRotateState = debounce(() => setRotate(!rotate), 2000);
 
@@ -19,23 +22,21 @@ const AnimatedLogo = () => {
         delayedRotateState();
     };
 
-    const duration = rotate ? '4000' : '3000';
+    const duration = { enter: 4000, exit: 3000 };
     return (
         <Fragment>
             <Grid container style={{ height: '100px' }}>
-                {/* <Grid.Row className={styles.logo} style={{ height: '90px', marginTop: '5px', marginLeft: '20px' }}>
-                    <Grid.Column widescreen={2} tablet={5} mobile={11}>
-                        <Link to='/home'>
-                            <div onMouseOut={() => onHover()}>
-                                <Sample canRotate={rotate} />
-                            </div>
-                        </Link>
+                <Grid item className={styles.logo} style={{ height: '90px', marginTop: '5px', marginLeft: '20px' }}>
+                    <Link to='/home'>
+                        <div onMouseOut={() => onHover()}>
+                            <Logo canRotate={rotate} />
+                        </div>
+                    </Link>
 
-                        <Transition.Group animation={'fade right'} duration={duration}>
-                            {rotate && <span className={styles.name}>help inc.</span>}
-                        </Transition.Group>
-                    </Grid.Column>
-                </Grid.Row> */}
+                    <Fade direction={'up'} in={rotate} timeout={duration}>
+                        <span className={styles.name}>help inc.</span>
+                    </Fade>
+                </Grid>
             </Grid>
         </Fragment>
     );

@@ -1,7 +1,7 @@
 //#region Imports
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import COLOR from '../../library/colors';
+import COLORS from '../../library/colors';
 
 //#endregion
 
@@ -20,17 +20,6 @@ export const useStyles = () => {
 
     const styles = makeStyles(() =>
         createStyles({
-            blueRectangleRotate: {
-                transform: rotate('360deg'),
-            },
-            grayRectangleRotate: {
-                transform: rotate('-315deg'),
-            },
-            grayRectangleDefaultRotate: {
-                transform: rotate('45deg'),
-            },
-            blueRectangle: Object.assign(rectangle, rectangleTransition, { backgroundColor: COLORS.PRIMARY }),
-            grayRectangle: Object.assign(rectangle, rectangleTransition, { backgroundColor: COLORS.SECONDARY }),
             hammer: {
                 zIndex: 99,
                 width: '35px',
@@ -39,6 +28,17 @@ export const useStyles = () => {
                 marginLeft: '10px',
                 position: 'absolute',
             },
+            blueRectangleRotate: {
+                transform: 'rotate(360deg)',
+            },
+            grayRectangleRotate: {
+                transform: 'rotate(-315deg)',
+            },
+            grayRectangleDefaultRotate: {
+                transform: 'rotate(45deg)',
+            },
+            grayRectangle: { ...rectangle, ...rectangleTransition, ...{ backgroundColor: COLORS.SECONDARY } },
+            blueRectangle: { ...rectangle, ...rectangleTransition, ...{ backgroundColor: COLORS.PRIMARY } },
         })
     );
 
