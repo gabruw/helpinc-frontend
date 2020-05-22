@@ -1,5 +1,5 @@
-const IMAGES = {
+const IMAGE = {
     HAMMER: require('../assets/images/hammer.png'),
 };
 
-export default IMAGES;
+export default IMAGE;

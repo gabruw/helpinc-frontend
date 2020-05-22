@@ -2,7 +2,7 @@
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-import COLOR from '../../library/colors';
+import COLOR from '../../library/color';
 import FONTS from '../../assets/fonts/fonts';
 
 //#endregion
@@ -10,18 +10,14 @@ import FONTS from '../../assets/fonts/fonts';
 export const useStyles = () => {
     const styles = makeStyles(() =>
         createStyles({
-            logo: {
-                width: '400px',
-                height: '120px',
-            },
             name: {
                 ...FONTS.HelveticaNeueLTPro75,
                 ...{
-                    fontSize: '30px',
-                    marginTop: '12px',
-                    marginLeft: '65px',
+                    color: COLOR.WHITE,
+                    fontSize: '25px',
+                    marginTop: '10px',
+                    marginLeft: '55px',
                     position: 'absolute',
-                    color: COLOR.SECONDARY,
                     textTransform: 'uppercase',
                 },
             },

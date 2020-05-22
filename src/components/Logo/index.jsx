@@ -2,13 +2,13 @@
 
 import React, { Fragment } from 'react';
 
-import IMAGES from '../../library/images';
+import IMAGE from '../../library/image';
 import useStyles from './styles';
 
 //#endregion
 
-const Logo = ({ canRotate = false }) => {
-    const styles = useStyles();
+const Logo = ({ canRotate = false, rectangleSize = 35, hammerSize = 25, marginTop = 11, marginLeft = 8 }) => {
+    const styles = useStyles(rectangleSize, hammerSize, marginTop, marginLeft);
 
     const blueRect = canRotate ? styles.blueRectangleRotate : '';
     const grayRect = canRotate ? styles.grayRectangleRotate : styles.grayRectangleDefaultRotate;
@@ -17,7 +17,7 @@ const Logo = ({ canRotate = false }) => {
         <Fragment>
             <div className={[styles.blueRectangle, blueRect].join(' ')}></div>
             <div className={[styles.grayRectangle, grayRect].join(' ')}></div>
-            <img className={styles.hammer} src={IMAGES.HAMMER} alt='Help Inc.' />
+            <img className={styles.hammer} src={IMAGE.HAMMER} alt='Help Inc.' />
         </Fragment>
     );
 };
