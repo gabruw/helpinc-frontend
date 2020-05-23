@@ -12,8 +12,8 @@ import useStyles from './styles';
 
 //#endregion
 
-const AnimatedLogo = () => {
-    const styles = useStyles();
+const AnimatedLogo = ({ logoAlign }) => {
+    const styles = useStyles(logoAlign);
 
     const [rotate, setRotate] = useState(false);
     const delayedRotateState = debounce(() => setRotate(!rotate), 2000);
@@ -25,8 +25,8 @@ const AnimatedLogo = () => {
     const duration = { enter: 4000, exit: 3000 };
     return (
         <Fragment>
-            <Grid container style={{ height: '100px' }}>
-                <Grid item className={styles.logo} style={{ height: '90px', marginTop: '5px', marginLeft: '20px' }}>
+            <Grid container>
+                <Grid item className={logoAlign}>
                     <Link to='/home'>
                         <div onMouseOut={() => onHover()}>
                             <Logo canRotate={rotate} />

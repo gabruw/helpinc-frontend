@@ -2,14 +2,16 @@
 
 import React, { Fragment } from 'react';
 
-import AnimatedLogo from '../../components/AnimatedLogo/index';
+import Navbar from '../../components/Navbar/index';
+import ServiceSample from './../../components/ServiceSample/index';
 
 //#endregion
 
 const Home = () => {
     return (
         <Fragment>
-            <AnimatedLogo />
+            <Navbar />
+            <ServiceSample />
         </Fragment>
     );
 };

@@ -7,7 +7,7 @@ export const COLOR = {
 
 export const SHADOW = {
     PRIMARY: '#458087',
-    SECONDARY: '#343434',
+    SECONDARY: '#616161',
 };
 
 export default COLOR;

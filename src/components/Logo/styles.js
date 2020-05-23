@@ -1,17 +1,17 @@
 //#region Imports
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import COLORS from '../../library/colors';
+import COLOR from '../../library/color';
 
 //#endregion
 
-export const useStyles = () => {
+export const useStyles = (rectangleSize, hammerSize, marginTop, marginLeft) => {
     const rectangle = {
-        width: '50px',
-        height: '50px',
+        width: rectangleSize,
+        height: rectangleSize,
         marginTop: '5px',
         position: 'absolute',
-        border: '1px solid #ffffff',
+        border: `1px solid ${COLOR.WHITE}`,
     };
 
     const rectangleTransition = {
@@ -21,12 +21,11 @@ export const useStyles = () => {
     const styles = makeStyles(() =>
         createStyles({
             hammer: {
-                zIndex: 99,
-                width: '35px',
-                height: '35px',
-                marginTop: '12px',
-                marginLeft: '10px',
+                width: hammerSize,
+                height: hammerSize,
                 position: 'absolute',
+                marginTop: marginTop,
+                marginLeft: marginLeft,
             },
             blueRectangleRotate: {
                 transform: 'rotate(360deg)',
@@ -37,8 +36,8 @@ export const useStyles = () => {
             grayRectangleDefaultRotate: {
                 transform: 'rotate(45deg)',
             },
-            grayRectangle: { ...rectangle, ...rectangleTransition, ...{ backgroundColor: COLORS.SECONDARY } },
-            blueRectangle: { ...rectangle, ...rectangleTransition, ...{ backgroundColor: COLORS.PRIMARY } },
+            grayRectangle: { ...rectangle, ...rectangleTransition, ...{ backgroundColor: COLOR.SECONDARY } },
+            blueRectangle: { ...rectangle, ...rectangleTransition, ...{ backgroundColor: COLOR.PRIMARY } },
         })
     );
 
