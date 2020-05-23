@@ -1,6 +1,7 @@
 //#region Imports
 
 import React, { Fragment } from 'react';
+import clsx from 'clsx';
 
 import IMAGE from '../../library/image';
 import useStyles from './styles';
@@ -10,13 +11,21 @@ import useStyles from './styles';
 const Logo = ({ canRotate = false, rectangleSize = 35, hammerSize = 25, marginTop = 11, marginLeft = 8 }) => {
     const styles = useStyles(rectangleSize, hammerSize, marginTop, marginLeft);
 
-    const blueRect = canRotate ? styles.blueRectangleRotate : '';
-    const grayRect = canRotate ? styles.grayRectangleRotate : styles.grayRectangleDefaultRotate;
+    const blueRect = clsx({
+        [styles.blueRectangle]: true,
+        [styles.blueRectangleRotate]: canRotate,
+    });
+
+    const grayRect = clsx({
+        [styles.grayRectangle]: true,
+        [styles.grayRectangleRotate]: canRotate,
+        [styles.grayRectangleDefaultRotate]: !canRotate,
+    });
 
     return (
         <Fragment>
-            <div className={[styles.blueRectangle, blueRect].join(' ')}></div>
-            <div className={[styles.grayRectangle, grayRect].join(' ')}></div>
+            <div className={blueRect}></div>
+            <div className={grayRect}></div>
             <img className={styles.hammer} src={IMAGE.HAMMER} alt='Help Inc.' />
         </Fragment>
     );

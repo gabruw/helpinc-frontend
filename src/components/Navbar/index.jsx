@@ -1,54 +1,39 @@
 //#region Imports
 
 import React, { Fragment } from 'react';
-import { Link, withRouter } from 'react-router-dom';
 
-import Fab from '@material-ui/core/Fab';
-import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import ScrollTop from '../../containers/ScrollTop/index';
 import AnimatedLogo from '../AnimatedLogo/index';
+import Anchor from './../../containers/Anchor/index';
+import ScrollTop from '../../containers/ScrollTop/index';
 
 import useStyles from './styles';
 
 //#endregion
 
-const Navbar = (props) => {
+const Navbar = () => {
     const styles = useStyles();
 
     return (
         <Fragment>
-            <AppBar className={styles.background} position={'static'}>
+            <AppBar className={styles.background}>
                 <Toolbar>
                     <IconButton edge={'start'} color={'inherit'} aria-label={'menu'}>
                         <MenuIcon />
                     </IconButton>
 
                     <AnimatedLogo logoAlign={styles.animatedLogoAlign} />
-
-                    {/* <Button variant='contained' color={'primary'}>
-                        Entrar
-                    </Button>
-                    <Button variant='contained' color={'primary'}>
-                        Login
-                    </Button> */}
                 </Toolbar>
             </AppBar>
 
-            <Toolbar id={'back-to-top-anchor'} />
-
-            <ScrollTop {...props}>
-                <Fab className={styles.floatButton} size={'small'}>
-                    <KeyboardArrowUpIcon />
-                </Fab>
-            </ScrollTop>
+            <Anchor id={'back-to-top'} />
+            <ScrollTop />
         </Fragment>
     );
 };
 
-export default withRouter(Navbar);
+export default Navbar;
