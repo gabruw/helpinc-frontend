@@ -8,18 +8,16 @@ import FONTS from '../../assets/fonts/fonts';
 //#endregion
 
 export const useStyles = () => {
-    const styles = makeStyles(() =>
+    const styles = makeStyles((theme) =>
         createStyles({
             name: {
+                fontSize: '25px',
+                color: COLOR.WHITE,
+                position: 'absolute',
+                textTransform: 'uppercase',
+                marginTop: theme.spacing(1),
+                marginLeft: theme.spacing(7),
                 ...FONTS.HelveticaNeueLTPro75,
-                ...{
-                    color: COLOR.WHITE,
-                    fontSize: '25px',
-                    marginTop: '10px',
-                    marginLeft: '55px',
-                    position: 'absolute',
-                    textTransform: 'uppercase',
-                },
             },
         })
     );

@@ -10,23 +10,32 @@ import IconButton from '@material-ui/core/IconButton';
 import AnimatedLogo from '../AnimatedLogo/index';
 import Anchor from './../../containers/Anchor/index';
 import ScrollTop from '../../containers/ScrollTop/index';
+import StyledButton from '../../components/StyledButton/index';
 
+import PATH from './../../library/path';
 import useStyles from './styles';
 
 //#endregion
 
-const Navbar = () => {
+const Navbar = ({ haveSideBar = false }) => {
     const styles = useStyles();
 
     return (
         <Fragment>
             <AppBar className={styles.background}>
                 <Toolbar>
-                    <IconButton edge={'start'} color={'inherit'} aria-label={'menu'}>
-                        <MenuIcon />
-                    </IconButton>
+                    {haveSideBar && (
+                        <IconButton edge={'start'} color={'inherit'} aria-label={'menu'}>
+                            <MenuIcon />
+                        </IconButton>
+                    )}
 
                     <AnimatedLogo logoAlign={styles.animatedLogoAlign} />
+
+                    <div className={styles.spacingBetweenButton}>
+                        <StyledButton isPrimary redirectTo={PATH.AUTHENTICATION} text={'Registrar'} />
+                    </div>
+                    <StyledButton isPrimary redirectTo={PATH.AUTHENTICATION} text={'Entrar'} />
                 </Toolbar>
             </AppBar>
 
