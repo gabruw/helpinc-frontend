@@ -11,27 +11,25 @@ import useStyles from './styles';
 
 //#endregion
 
-const ScrollTop = () => {
+const ScrollTop = ({ anchorReference }) => {
     const styles = useStyles();
 
     const trigger = useScrollTrigger({
-        disableHysteresis: true,
         threshold: 100,
+        disableHysteresis: true,
     });
 
-    const handleClick = (document) => {
-        const anchor = document.querySelector('#back-to-top');
-        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const scrollToTop = () => {
+        anchorReference.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+        });
     };
 
     return (
         <Fragment>
             <Zoom in={trigger}>
-                <div
-                    role={'presentation'}
-                    className={styles.anchorButton}
-                    onClick={(e) => handleClick(e.target.ownerDocument)}
-                >
+                <div className={styles.anchorButton} role={'presentation'} onClick={() => scrollToTop()}>
                     <Fab className={styles.floatButton} size={'small'}>
                         <KeyboardArrowUpIcon />
                     </Fab>
