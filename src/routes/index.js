@@ -17,7 +17,7 @@ const ROUTERS = [
     {
         path: '*',
         exact: true,
-        component: require('../views/home').default,
+        component: require('../views/error').default,
     },
 ];
 

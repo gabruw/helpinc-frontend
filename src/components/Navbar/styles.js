@@ -6,15 +6,18 @@ import COLOR from '../../library/color';
 //#endregion
 
 export const useStyles = () => {
-    const styles = makeStyles(() =>
+    const styles = makeStyles((theme) =>
         createStyles({
             background: {
                 height: '60px',
                 backgroundColor: COLOR.SECONDARY,
             },
             animatedLogoAlign: {
-                marginLeft: '20px',
-                marginBottom: '48px',
+                marginLeft: theme.spacing(3),
+                marginBottom: theme.spacing(6),
+            },
+            spacingBetweenButton: {
+                marginRight: theme.spacing(2),
             },
         })
     );

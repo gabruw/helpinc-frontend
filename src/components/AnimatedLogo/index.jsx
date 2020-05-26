@@ -8,6 +8,8 @@ import Grid from '@material-ui/core/Grid';
 import Fade from '@material-ui/core/Fade';
 
 import Logo from '../Logo/index';
+
+import PATH from './../../library/path';
 import useStyles from './styles';
 
 //#endregion
@@ -27,7 +29,7 @@ const AnimatedLogo = ({ logoAlign }) => {
         <Fragment>
             <Grid container>
                 <Grid item className={logoAlign}>
-                    <Link to='/home'>
+                    <Link to={PATH.HOME}>
                         <div onMouseOut={() => onHover()}>
                             <Logo canRotate={rotate} />
                         </div>

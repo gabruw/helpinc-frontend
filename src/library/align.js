@@ -16,8 +16,4 @@ export const ALIGN = {
     },
 };
 
-export const MARGIN = {
-    BUTTON: 2,
-};
-
 export default ALIGN;
