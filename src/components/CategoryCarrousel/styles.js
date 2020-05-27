@@ -11,7 +11,7 @@ export const useStyles = () => {
             background: {
                 width: '100%',
                 height: '400px',
-                backgroundColor: COLOR.SECONDARY,
+                backgroundColor: COLOR.LIGHT_GRAY,
             },
         })
     );

@@ -1,5 +1,7 @@
 export const TEXT = {
-    HOME: {},
+    HOME: {
+        SERVICE_SAMPLE_TITLE: 'Utilize os nossos serviços agora mesmo',
+    },
     LOGIN: {},
     REGISTER: {},
     GENERICAL: {
