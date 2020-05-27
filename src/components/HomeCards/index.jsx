@@ -8,7 +8,7 @@ import useStyles from './styles';
 
 //#endregion
 
-const Footer = () => {
+const HomeCards = () => {
     const styles = useStyles();
 
     return (
@@ -18,4 +18,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default HomeCards;

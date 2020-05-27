@@ -16,6 +16,7 @@ const StyledButton = ({
     isContained = true,
     redirectTo = false,
     text = '',
+    type = 'text',
 }) => {
     const styles = useStyles();
 
@@ -29,7 +30,7 @@ const StyledButton = ({
     return (
         <Fragment>
             <Link to={redirectTo} className={styles.link}>
-                <Button className={buttonStyles} variant={variant}>
+                <Button type={type} className={buttonStyles} variant={variant}>
                     {text}
                 </Button>
             </Link>

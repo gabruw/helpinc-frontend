@@ -8,9 +8,17 @@ import COLOR from '../../library/color';
 export const useStyles = () => {
     const styles = makeStyles((theme) =>
         createStyles({
-            background: {
+            backgroundHeight: {
                 height: '60px',
+            },
+            background: {
+                transition: 'box-shadow 1s ease, background-color 1s ease',
                 backgroundColor: COLOR.SECONDARY,
+            },
+            backgroundTransparent: {
+                boxShadow: 'none',
+                transition: 'background-color 1s ease',
+                backgroundColor: 'transparent',
             },
             animatedLogoAlign: {
                 marginLeft: theme.spacing(3),
