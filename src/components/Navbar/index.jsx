@@ -9,13 +9,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
-import AnimatedLogo from '../AnimatedLogo/index';
-import Anchor from './../../containers/Anchor/index';
-import ScrollTop from '../../containers/ScrollTop/index';
+import Anchor from '../../components/Anchor/index';
+import ScrollTop from '../../components/ScrollTop/index';
 import StyledButton from '../../components/StyledButton/index';
+import AnimatedLogo from '../../containers/AnimatedLogo/index';
 
-import PATH from './../../library/path';
-import TEXT from './../../library/text';
+import PATH from '../../library/path';
+import TEXT from '../../library/text';
 
 import useStyles from './styles';
 

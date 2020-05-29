@@ -17,7 +17,7 @@ export const useStyles = () => {
                 textTransform: 'uppercase',
                 marginTop: theme.spacing(1),
                 marginLeft: theme.spacing(7),
-                ...FONTS.HelveticaNeueLTPro75,
+                ...FONTS.HelveticaNeueLTProMD,
             },
         })
     );

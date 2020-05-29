@@ -2,7 +2,7 @@
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-import { FONTS } from './../../assets/fonts/fonts';
+import FONTS from '../../assets/fonts/fonts';
 import { COLOR, SHADOW } from '../../library/color';
 
 //#endregion
@@ -14,7 +14,7 @@ export const useStyles = () => {
                 textDecoration: 'none',
             },
             text: {
-                ...FONTS.HelveticaNeueLTPro75,
+                ...FONTS.HelveticaNeueLTProMD,
                 color: COLOR.WHITE,
             },
             primary: {
