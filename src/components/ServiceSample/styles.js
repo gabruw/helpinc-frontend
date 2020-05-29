@@ -2,8 +2,11 @@
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-import { COLOR } from './../../library/color';
-import { ALIGN } from './../../library/align';
+import COLOR from '../../library/color';
+import ALIGN from '../../assets/css/align';
+import FONTS from '../../assets/fonts/fonts';
+
+import Background from '../../assets/images/gray-home-background.jpg';
 
 //#endregion
 
@@ -14,16 +17,21 @@ export const useStyles = () => {
                 width: '100%',
                 height: '940px',
                 ...ALIGN.ALIGN_CENTER,
+                ...ALIGN.IMAGE_CENTER(Background),
             },
             background: {
-                color: COLOR.WHITE,
-                zIndex: '99',
-                top: '120px',
-                // left: '40px',
-                maxWidth: '600px',
+                padding: '40px',
                 minHeight: '550px',
-                position: 'absolute',
                 backgroundColor: COLOR.SECONDARY,
+            },
+            text: {
+                fontSize: '60px',
+                color: COLOR.WHITE,
+                ...FONTS.HelveticaNeueLTProLT,
+            },
+            underlineText: {
+                color: COLOR.PRIMARY,
+                textDecoration: 'underline',
             },
         })
     );

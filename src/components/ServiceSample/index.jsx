@@ -3,11 +3,9 @@
 import React, { Fragment } from 'react';
 
 import Grid from '@material-ui/core/Grid';
-import FormServiceSample from './../../containers/FormServiceSample/index';
+import FormServiceSample from '../../components/FormServiceSample/index';
 
-import IMAGE from '../../library/image';
-import TEXT from './../../library/text';
-
+import TEXT from '../../library/text';
 import useStyles from './styles';
 
 //#endregion
@@ -18,14 +16,27 @@ const ServiceSample = () => {
 
     return (
         <Fragment>
-            <img className={styles.backgroundImage} src={IMAGE.GRAY_HOME_BACKGROUND} alt='Amostra de Serviço' />
+            <div className={styles.backgroundImage}>
+                <Grid xs={12} container>
+                    <Grid xs={1} item></Grid>
+                    <Grid className={styles.background} xl={5} xs={10} item>
+                        <Grid item>
+                            <span className={styles.text}>
+                                {SERVICE_SAMPLE_TITLE[0]}
+                                <br />
+                                {SERVICE_SAMPLE_TITLE[1]}
+                                <span className={styles.underlineText}>{SERVICE_SAMPLE_TITLE[2]}</span>
+                                <br />
+                                {SERVICE_SAMPLE_TITLE[3]}
+                            </span>
+                        </Grid>
 
-            {/* <Grid className={styles.background} container>
-                <Grid item>{SERVICE_SAMPLE_TITLE}</Grid>
-                <Grid item>
-                    <FormServiceSample />
+                        <Grid item>
+                            <FormServiceSample />
+                        </Grid>
+                    </Grid>
                 </Grid>
-            </Grid> */}
+            </div>
         </Fragment>
     );
 };

@@ -7,9 +7,9 @@ import { debounce } from 'lodash';
 import Grid from '@material-ui/core/Grid';
 import Fade from '@material-ui/core/Fade';
 
-import Logo from '../Logo/index';
+import Logo from '../../components/Logo/index';
 
-import PATH from './../../library/path';
+import PATH from '../../library/path';
 import useStyles from './styles';
 
 //#endregion

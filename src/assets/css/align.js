@@ -14,6 +14,11 @@ export const ALIGN = {
         alignItems: 'center',
         justifyContent: 'flex-end',
     },
+    IMAGE_CENTER: (image) => ({
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: `url(${image})`,
+    }),
 };
 
 export default ALIGN;

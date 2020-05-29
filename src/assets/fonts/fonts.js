@@ -1,11 +1,14 @@
 import './fonts.css';
 
 export const FONTS = {
-    HelveticaNeueLTPro55: {
-        fontFamily: 'HelveticaNeueLTPro55',
+    HelveticaNeueLTProLT: {
+        fontFamily: 'HelveticaNeueLTPro55Lite',
     },
-    HelveticaNeueLTPro75: {
-        fontFamily: 'HelveticaNeueLTPro75',
+    HelveticaNeueLTProMD: {
+        fontFamily: 'HelveticaNeueLTPro65Medium',
+    },
+    HelveticaNeueLTProBD: {
+        fontFamily: 'HelveticaNeueLTPro55Bold',
     },
 };
 
