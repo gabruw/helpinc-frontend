@@ -20,7 +20,7 @@ const SkillFrame = ({ label = '', color = COLOR.PRIMARY }) => {
                 {label}
             </InputLabel>
             <Grid container spacing={1}>
-                {Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).map((value, index) => (
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value, index) => (
                     <Grid key={index} item>
                         <StarBorderIcon className={styles.icon} fontSize='inherit' />
                     </Grid>

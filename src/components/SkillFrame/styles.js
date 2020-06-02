@@ -1,8 +1,6 @@
 //#region Imports
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-
-import COLOR from './../../library/color';
 import FIELD from '../../assets/css/field';
 
 //#endregion

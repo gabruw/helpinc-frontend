@@ -1,7 +1,7 @@
 //#region Imports
 
 import React, { Fragment } from 'react';
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -24,7 +24,7 @@ const FormServiceSample = () => {
     const { NAME_SKILL, NAME_SKILL_LEVEL, NAME_CEP } = NAME;
     const { LABEL_SKILL_TYPE, LABEL_SKILL, LABEL_SKILL_LEVEL, LABEL_CEP } = LABEL;
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    // const { register, handleSubmit, watch, errors } = useForm();
 
     return (
         <Fragment>
