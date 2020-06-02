@@ -17,9 +17,9 @@ const ServiceSample = () => {
     return (
         <Fragment>
             <div className={styles.backgroundImage}>
-                <Grid xs={12} container>
+                <Grid container>
                     <Grid xs={1} item></Grid>
-                    <Grid className={styles.background} xl={5} xs={10} item>
+                    <Grid className={styles.background} xl={4} xs={10} item>
                         <Grid item>
                             <span className={styles.text}>
                                 {SERVICE_SAMPLE_TITLE[0]}

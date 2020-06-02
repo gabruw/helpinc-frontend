@@ -5,11 +5,17 @@ import FIELD from '../../assets/css/field';
 
 //#endregion
 
-export const useStyles = () => {
+export const useStyles = (color) => {
     const styles = makeStyles(() =>
         createStyles({
             label: FIELD.LABEL,
-            field: FIELD.FULL_WIDTH_INPUT,
+            icon: {
+                color: color,
+                width: '40px',
+                height: '40px',
+                borderColor: color,
+                border: '2px solid',
+            },
         })
     );
 

@@ -1,15 +1,25 @@
 export const ALIGN = {
-    ALIGN_LEFT: {
+    LEFT: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
     },
-    ALIGN_CENTER: {
+    CENTER: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    ALIGN_RIGHT: {
+    RIGHT: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+    },
+    START: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+    },
+    END: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',

@@ -16,7 +16,7 @@ export const useStyles = () => {
             backgroundImage: {
                 width: '100%',
                 height: '940px',
-                ...ALIGN.ALIGN_CENTER,
+                ...ALIGN.CENTER,
                 ...ALIGN.IMAGE_CENTER(Background),
             },
             background: {
