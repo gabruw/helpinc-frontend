@@ -19,6 +19,9 @@ export const useStyles = () => {
                 ...ALIGN.CENTER,
                 ...ALIGN.IMAGE_CENTER(Background),
             },
+            separator: {
+                width: '100%',
+            },
             background: {
                 padding: '40px',
                 minHeight: '550px',
