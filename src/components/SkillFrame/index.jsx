@@ -7,12 +7,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 import useStyles from './styles';
-import { COLOR } from './../../library/color';
+import COLOR from '../../library/color';
 
 //#endregion
 
-const SkillFrame = ({ label = '', color = COLOR.PRIMARY }) => {
-    const styles = useStyles(color);
+const SkillFrame = ({ label = '', labelColor = COLOR.WHITE, color = COLOR.PRIMARY }) => {
+    const styles = useStyles(labelColor, color);
 
     return (
         <Fragment>

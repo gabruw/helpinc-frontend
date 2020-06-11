@@ -2,15 +2,17 @@
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
-import COLOR from './../../library/color';
-import FIELD from '../../assets/css/field';
+import COLOR from '../../library/color';
+import LABEL_STYLES from '../../assets/css/label';
 
 //#endregion
 
-export const useStyles = () => {
+export const useStyles = (labelColor) => {
+    const label = LABEL_STYLES(labelColor);
+
     const styles = makeStyles(() =>
         createStyles({
-            label: FIELD.LABEL,
+            label: label,
             field: {
                 marginTop: '5px',
                 color: '#FFE623',

@@ -5,14 +5,14 @@ import React, { Fragment } from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
+import Field from '../Field/index';
 import SkillFrame from '../SkillFrame/index';
-import StyledInput from '../StyledInput/index';
-import StyledSelect from '../StyledSelect/index';
 import StyledButton from '../StyledButton/index';
 import StyledRating from '../StyledRating/index';
 
+import NAME from '../../library/name';
+import FIELD from '../../library/field';
 import LABEL from '../../library/label';
-import NAME from './../../library/name';
 
 import useStyles from './styles';
 
@@ -21,6 +21,7 @@ import useStyles from './styles';
 const FormServiceSample = () => {
     const styles = useStyles();
 
+    const { TEXT, SELECT } = FIELD;
     const { NAME_SKILL, NAME_SKILL_LEVEL, NAME_CEP } = NAME;
     const { LABEL_SKILL_TYPE, LABEL_SKILL, LABEL_SKILL_LEVEL, LABEL_CEP } = LABEL;
 
@@ -35,7 +36,7 @@ const FormServiceSample = () => {
                     </Grid>
 
                     <Grid item xl={6} xs={12}>
-                        <StyledSelect label={LABEL_SKILL} name={NAME_SKILL} />
+                        <Field type={SELECT} label={LABEL_SKILL} name={NAME_SKILL} />
                     </Grid>
 
                     <Grid item xl={6} xs={12}>
@@ -43,7 +44,7 @@ const FormServiceSample = () => {
                     </Grid>
 
                     <Grid item xl={6} xs={12}>
-                        <StyledInput label={LABEL_CEP} name={NAME_CEP} />
+                        <Field type={TEXT} label={LABEL_CEP} name={NAME_CEP} />
                     </Grid>
 
                     <Grid className={styles.buttonAlign} item xs={12}>

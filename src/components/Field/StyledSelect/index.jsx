@@ -2,36 +2,27 @@
 
 import React, { Fragment } from 'react';
 
-import InputLabel from '@material-ui/core/InputLabel';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 
-import COLOR from '../../library/color';
-import { fieldDefaultStyles, getClasses } from '../../assets/styles/field';
+import { useClasses } from '../styles';
 
 //#endregion
 
-const StyledSelect = ({
-    label = '',
-    name = '',
-    items = [],
-    variant = 'outlined',
-    disabled = false,
-    borderColor = COLOR.PRIMARY,
-}) => {
-    const styles = fieldDefaultStyles(borderColor);
+const StyledSelect = ({ name, label, items, styles, onBlur, variant, onClick, disabled, onChange }) => {
+    const classes = useClasses();
     const haveItems = items && items.length > 0;
 
     return (
         <Fragment>
-            <InputLabel className={styles.label} htmlFor={styles.field}>
-                {label}
-            </InputLabel>
             <Autocomplete
                 className={styles.field}
                 name={name}
                 size={'small'}
                 options={items}
+                onBlur={() => onBlur && onBlur()}
+                onClick={() => onClick && onClick()}
+                onChange={() => onChange && onChange()}
                 disabled={!haveItems || disabled}
                 getOptionLabel={(option) => option.title}
                 renderInput={(params) => (
@@ -39,7 +30,7 @@ const StyledSelect = ({
                         {...params}
                         InputProps={{
                             ...params.InputProps,
-                            ...getClasses(),
+                            ...classes,
                         }}
                         variant={variant}
                         placeholder={label}

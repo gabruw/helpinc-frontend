@@ -11,13 +11,11 @@ import useStyles from './styles';
 const Logo = ({ canRotate = false, rectangleSize = 35, hammerSize = 25, marginTop = 11, marginLeft = 8 }) => {
     const styles = useStyles(rectangleSize, hammerSize, marginTop, marginLeft);
 
-    const blueRect = clsx({
-        [styles.blueRectangle]: true,
+    const blueRect = clsx(styles.blueRectangle, {
         [styles.blueRectangleRotate]: canRotate,
     });
 
-    const grayRect = clsx({
-        [styles.grayRectangle]: true,
+    const grayRect = clsx(styles.grayRectangle, {
         [styles.grayRectangleRotate]: canRotate,
         [styles.grayRectangleDefaultRotate]: !canRotate,
     });

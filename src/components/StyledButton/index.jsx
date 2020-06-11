@@ -21,8 +21,7 @@ const StyledButton = ({
 }) => {
     const styles = useStyles();
 
-    const buttonStyles = clsx({
-        [styles.text]: true,
+    const buttonStyles = clsx(styles.text, {
         [styles.primary]: isPrimary,
         [styles.secondary]: isSecondary,
     });

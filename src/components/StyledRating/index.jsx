@@ -7,11 +7,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 import useStyles from './styles';
+import COLOR from '../../library/color';
 
 //#endregion
 
-const StyledRating = ({ label = '', name = 'rating' }) => {
-    const styles = useStyles();
+const StyledRating = ({ label = '', name = 'rating', labelColor = COLOR.WHITE }) => {
+    const styles = useStyles(labelColor);
 
     return (
         <Fragment>

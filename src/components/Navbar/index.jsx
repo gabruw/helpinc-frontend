@@ -30,9 +30,8 @@ const Navbar = ({ haveSideBar = false }) => {
         disableHysteresis: true,
     });
 
-    const background = clsx({
+    const background = clsx(styles.backgroundHeight, {
         [styles.background]: trigger,
-        [styles.backgroundHeight]: true,
         [styles.backgroundTransparent]: !trigger,
     });
 

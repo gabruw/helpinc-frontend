@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 
 import Navbar from '../../components/Navbar/index';
 import Footer from '../../components/Footer/index';
-import HomeCards from '../../components/HomeCards/index';
+import StyledCard from '../../components/StyledCard/index';
 import ServiceSample from '../../components/ServiceSample/index';
 import ServiceCarrousel from '../../containers/ServiceCarrousel/index';
 import CategoryCarrousel from '../../containers/CategoryCarrousel/index';
@@ -16,7 +16,7 @@ const Home = () => {
         <Fragment>
             <Navbar />
             <ServiceSample />
-            <HomeCards />
+            <StyledCard />
             <CategoryCarrousel />
             <ServiceSample />
             <ServiceCarrousel />

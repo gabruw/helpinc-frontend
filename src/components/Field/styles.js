@@ -1,18 +1,25 @@
 //#region Imports
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import FIELD from '../../assets/css/field';
+
+import COLOR from '../../library/color';
+import LABEL_STYLES from '../../assets/css/label';
 
 //#endregion
 
-export const fieldDefaultStyles = (borderColor) => {
+export const useStyles = (labelColor, borderColor) => {
+    const label = LABEL_STYLES(labelColor);
+
     const styles = makeStyles(() =>
         createStyles({
-            label: FIELD.LABEL,
+            label: label,
             field: {
+                width: '100%',
+                height: '40px',
                 border: '3px solid',
+                color: COLOR.SECONDARY,
                 borderColor: borderColor,
-                ...FIELD.FULL_WIDTH_INPUT,
+                backgroundColor: COLOR.LIGHT_GRAY,
             },
             notchedOutline: {
                 borderWidth: '1px',
@@ -24,8 +31,8 @@ export const fieldDefaultStyles = (borderColor) => {
     return styles();
 };
 
-export const getClasses = () => {
-    const styles = fieldDefaultStyles();
+export const useClasses = () => {
+    const styles = useStyles();
     const classes = {
         classes: {
             notchedOutline: styles.notchedOutline,
@@ -35,4 +42,4 @@ export const getClasses = () => {
     return classes;
 };
 
-export default fieldDefaultStyles;
+export default useStyles;

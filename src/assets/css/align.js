@@ -1,4 +1,4 @@
-export const ALIGN = {
+export const ALIGN_STYLES = {
     LEFT: {
         display: 'flex',
         alignItems: 'center',
@@ -31,4 +31,4 @@ export const ALIGN = {
     }),
 };
 
-export default ALIGN;
+export default ALIGN_STYLES;

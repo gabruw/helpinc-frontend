@@ -1,14 +1,16 @@
 //#region Imports
 
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import FIELD from '../../assets/css/field';
+import LABEL_STYLES from '../../assets/css/label';
 
 //#endregion
 
-export const useStyles = (color) => {
+export const useStyles = (labelColor, color) => {
+    const label = LABEL_STYLES(labelColor);
+
     const styles = makeStyles(() =>
         createStyles({
-            label: FIELD.LABEL,
+            label: label,
             icon: {
                 color: color,
                 width: '40px',
