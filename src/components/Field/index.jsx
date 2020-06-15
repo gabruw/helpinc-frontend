@@ -19,43 +19,58 @@ const Field = ({
     name = '',
     label = '',
     items = [],
+    formConfig,
     type = 'text',
     disabled = false,
     variant = 'outlined',
     labelColor = COLOR.WHITE,
     borderColor = COLOR.PRIMARY,
+    ...inputProps
 }) => {
     const styles = useStyles(labelColor, borderColor);
 
+    const error = errors[name] && errors[name].message;
+    const inputLabel = clsx(styles.label, { [styles.labelError]: error });
+
     return (
         <Fragment>
-            <InputLabel className={styles.label} htmlFor={styles.field}>
+            <InputLabel className={inputLabel} htmlFor={styles.field}>
                 {label}
             </InputLabel>
+
             {type === 'select' ? (
                 <StyledSelect
-                    name={name}
-                    label={label}
-                    styles={styles}
-                    onBlur={onBlur}
-                    variant={variant}
-                    onClick={onClick}
-                    disabled={disabled}
-                    onChange={onChange}
-                />
-            ) : (
-                <StyledInput
                     name={name}
                     label={label}
                     items={items}
                     styles={styles}
                     onBlur={onBlur}
+                    onClick={onClick}
+                    variant={variant}
+                    onChange={onChange}
+                    disabled={disabled}
+                    error={Boolean(error)}
+                    formConfig={formConfig}
+                    {...inputProps}
+                />
+            ) : (
+                <StyledInput
+                    name={name}
+                    type={type}
+                    label={label}
+                    styles={styles}
+                    onBlur={onBlur}
                     variant={variant}
                     onClick={onClick}
-                    disabled={disabled}
                     onChange={onChange}
+                    disabled={disabled}
+                    error={Boolean(error)}
+                    formConfig={formConfig}
+                    {...inputProps}
                 />
             )}
+
+            {error && <Box className={styles.error}>{error}</Box>}
         </Fragment>
     );
 };

@@ -9,21 +9,37 @@ import { useClasses } from '../styles';
 
 //#endregion
 
-const StyledSelect = ({ name, label, items, styles, onBlur, variant, onClick, disabled, onChange }) => {
+const StyledSelect = ({
+    name,
+    label,
+    items,
+    error,
+    styles,
+    onBlur,
+    onClick,
+    variant,
+    disabled,
+    onChange,
+    formConfig,
+    ...inputProps
+}) => {
     const classes = useClasses();
     const haveItems = items && items.length > 0;
 
     return (
         <Fragment>
             <Autocomplete
-                className={styles.field}
+                className={clsx(styles.field, {
+                    [styles.fieldError]: error,
+                })}
                 name={name}
                 size={'small'}
                 options={items}
+                formConfig={formConfig}
+                disabled={!haveItems || disabled}
                 onBlur={() => onBlur && onBlur()}
                 onClick={() => onClick && onClick()}
                 onChange={() => onChange && onChange()}
-                disabled={!haveItems || disabled}
                 getOptionLabel={(option) => option.title}
                 renderInput={(params) => (
                     <TextField
@@ -36,6 +52,7 @@ const StyledSelect = ({ name, label, items, styles, onBlur, variant, onClick, di
                         placeholder={label}
                     />
                 )}
+                {...inputProps}
             />
         </Fragment>
     );

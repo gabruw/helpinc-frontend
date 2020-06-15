@@ -25,7 +25,13 @@ const FormServiceSample = () => {
     const { NAME_SKILL, NAME_SKILL_LEVEL, NAME_CEP } = NAME;
     const { LABEL_SKILL_TYPE, LABEL_SKILL, LABEL_SKILL_LEVEL, LABEL_CEP } = LABEL;
 
-    // const { register, handleSubmit, watch, errors } = useForm();
+    // const { register, errors, handleSubmit } = useForm({
+    //     validationSchema: schema,
+    //     defaultValues: {
+    //         [NAME_SKILL]: '',
+    //         [NAME_SKILL_LEVEL]: '',
+    //     },
+    // });
 
     return (
         <Fragment>
