@@ -1,7 +1,9 @@
 //#region Imports
 
+import clsx from 'clsx';
 import React, { Fragment } from 'react';
 
+import Box from '@material-ui/core/Box';
 import InputLabel from '@material-ui/core/InputLabel';
 
 import StyledInput from './StyledInput';
@@ -13,6 +15,7 @@ import useStyles from './styles';
 //#endregion
 
 const Field = ({
+    errors,
     onBlur,
     onClick,
     onChange,
@@ -29,7 +32,7 @@ const Field = ({
 }) => {
     const styles = useStyles(labelColor, borderColor);
 
-    const error = errors[name] && errors[name].message;
+    const error = errors && errors[name] && errors[name].message;
     const inputLabel = clsx(styles.label, { [styles.labelError]: error });
 
     return (
